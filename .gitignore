@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+__pycache__/
+
+# Python
+*.pyc
+
+# ML binaries
+*.h5
+*.model
+*.dylib
+*.so
+
+# OS
+.DS_Store
