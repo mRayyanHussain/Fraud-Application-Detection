@@ -1,13 +1,23 @@
 import re
-from nltk.corpus import stopwords
-from nltk.stem import PorterStemmer
 
-stemmer = PorterStemmer()
-stop_words = set(stopwords.words('english'))
+# ----------------------------------
+# SIMPLE STOPWORDS (DEPLOY-SAFE)
+# ----------------------------------
+STOP_WORDS = {
+    "a", "an", "the", "is", "are", "was", "were",
+    "in", "on", "at", "for", "to", "from", "by",
+    "and", "or", "but", "if", "then", "this", "that",
+    "it", "of", "with", "as", "be", "have", "has",
+    "had", "i", "you", "he", "she", "they", "we",
+    "my", "your", "his", "her", "their", "our"
+}
 
+# ----------------------------------
+# TEXT CLEANING FUNCTION
+# ----------------------------------
 def clean_text(text):
     text = text.lower()
-    text = re.sub(r'[^a-zA-Z]', ' ', text)
+    text = re.sub(r"[^a-z\s]", "", text)
     words = text.split()
-    words = [stemmer.stem(word) for word in words if word not in stop_words]
+    words = [w for w in words if w not in STOP_WORDS]
     return " ".join(words)
