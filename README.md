@@ -1,4 +1,4 @@
-# 🚨 Fraud Application Detection System
+# 🚨 Fraud Application Detection System - https://fraud-application-detection-vmb3m678.streamlit.app/  ( <--- Live Link )
 
 A Machine Learning–based web application to detect **fraudulent mobile applications** by analyzing **user reviews, sentiment patterns, and rating behavior**.  
 The system provides a **fraud risk score** and classifies apps as **Low, Medium, or High Risk**.
@@ -81,7 +81,7 @@ Fraud-Application-Detection/
 (Add your Streamlit Cloud link here)
 
 Example:
-https://fraud-application-detection.streamlit.app
+https://fraud-application-detection-vmb3m678.streamlit.app/
 
 
 ---
